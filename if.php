@@ -5,28 +5,28 @@ $score=checkscore($score);
 
 if($score!=1000){
     echo "我的成績:" . $score;
-echo "<br>";
-echo "判斷為";
-
-if($score>60){
-    echo "及格";
-}else{
-    echo "不及格";
-}
-
-echo "<br>";
-
-odd_01($score);
-
-br();
-
-
-// $lv=($score>=60)?'及格':'不及格';
-// echo $score;
-// echo $lv;
-
-
-br();
+    echo "<br>";
+    echo "判斷為";
+    
+    if($score>60){
+        echo "及格";
+    }else{
+        echo "不及格";
+    }
+    
+    echo "<br>";
+    
+    odd_01($score);
+    
+    br();
+    
+    
+    // $lv=($score>=60)?'及格':'不及格';
+    // echo $score;
+    // echo $lv;
+    
+    
+    br();
 }
 else{
     echo "///錯誤!///";
@@ -53,7 +53,7 @@ else{
 // $lev=($score>=60)?'及格':'不及格';
 // echo $score;
 // echo $lev;
-
+        
 // $level="B";
 
 // br();
