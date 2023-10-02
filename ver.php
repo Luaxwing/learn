@@ -15,10 +15,7 @@ echo age;
 $name='呂宗翰';
 echo $name;
 
-$score=70;
-$level=($score>=60)?'及格':'不及格';
-echo $score;
-echo $level;
+
 
 print '<br>';
 
