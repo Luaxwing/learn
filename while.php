@@ -60,9 +60,6 @@ function odd($n,$sum){
         endline($i,$n);
     }
 }
-
-
-
 function tenplus($n,$sum){
     for ($i=1;$i<=$n;$i++){
         $sum=$i*10;
@@ -70,7 +67,6 @@ function tenplus($n,$sum){
         endline($i,$n);
     }
 }
-
 function prime_N($n,$sum){
     $num=2;
     for ($i=1;$i<=$n;$i+=1){
@@ -106,11 +102,6 @@ function prime_N($n,$sum){
         
 
 }
-
-
-    
-
-
 function endline($i,$n){
     if($i != $n){
         echo " , ";
@@ -118,3 +109,34 @@ function endline($i,$n){
         echo "<br>";
     }
 }
+
+?>
+
+<h3>陣列</h3>
+
+<?php
+$a=['甲','乙','丙','丁','戊'];
+$length = count($a);
+
+for($i=0;$i<$length;$i++){
+    echo $a[$i];
+}
+echo "<br>";
+echo $i;
+
+// $b=$a[0];
+// $b=$a[1];
+// $b=$a[2];
+echo "<br>"."<br>";
+foreach($a as $b){
+    echo $b;
+}
+
+echo "<br>";
+
+foreach($a as $idx => $b){
+    echo $idx. "=>" . $b;
+    echo "<br>";
+}
+
+?>
