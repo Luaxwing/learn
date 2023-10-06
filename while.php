@@ -23,3 +23,97 @@ function p_sum($a,$b){
 }
 
 ?>
+
+<!-- ---------------------------------------------- -->
+
+<h1>迴圈練習</h1>
+
+<h3>使用for迴圈來產生以下的數列</h3>
+<ul>
+    <li>1,3,5,7,9,....n</li>
+    <li>10,20,30,40,50,60....n</li>
+    <li>3,5,7,11,13,17</li>
+</ul>
+
+<?php
+
+$n = 10;
+$sum=0;
+
+echo "n=" . $n . "<br>". "<br>";
+
+echo "奇數數列" . "<br>";
+odd($n,$sum);
+
+echo "十數列" . "<br>";
+tenplus($n,$sum);
+
+echo "質數列" . "<br>";
+prime_N($n,$sum);
+
+function odd($n,$sum){
+    for ($i=1;$i<=$n;$i++){
+        $sum=($i-1)*2+1;
+        echo $sum;
+        endline($i,$n);
+    }
+}
+
+
+
+function tenplus($n,$sum){
+    for ($i=1;$i<=$n;$i++){
+        $sum=$i*10;
+        echo $sum;
+        endline($i,$n);
+    }
+}
+
+function prime_N($n,$sum){
+    $num=2;
+    for ($i=1;$i<=$n;$i+=1){
+
+
+        for ($j=2;$flag=true;$j++){
+            if(($num % $j)==0){
+                if($num != $j){
+                    $num++; 
+                }
+                else{
+                    $sum=$num;
+                    echo $sum;
+                    endline($i,$n);
+                    $num++;
+                    break;
+                }
+                $j=2;
+                
+            }
+
+
+
+
+        }
+        
+
+
+            
+
+        }
+        
+            
+        
+
+        }
+
+
+    
+
+
+function endline($i,$n){
+    if($i != $n){
+        echo " , ";
+    }else{
+        echo "<br>";
+ }
+}
