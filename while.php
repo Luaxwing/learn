@@ -42,6 +42,8 @@ $sum=0;
 
 echo "n=" . $n . "<br>". "<br>";
 
+
+
 echo "奇數數列" . "<br>";
 odd($n,$sum);
 
@@ -73,7 +75,6 @@ function prime_N($n,$sum){
     $num=2;
     for ($i=1;$i<=$n;$i+=1){
 
-
         for ($j=2;$flag=true;$j++){
             if(($num % $j)==0){
                 if($num != $j){
@@ -99,12 +100,12 @@ function prime_N($n,$sum){
 
             
 
-        }
+    }
         
             
         
 
-        }
+}
 
 
     
@@ -115,5 +116,5 @@ function endline($i,$n){
         echo " , ";
     }else{
         echo "<br>";
- }
+    }
 }
