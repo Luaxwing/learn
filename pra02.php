@@ -32,7 +32,7 @@
     } */
 </style>
 
-
+<li><a href="P_list.html">返回</a></li>
 
 <h1>九九乘法表</h1>
 <h2>-1 原理</h2>

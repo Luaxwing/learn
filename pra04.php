@@ -1,5 +1,7 @@
 
+<li><a href="P_list.html">返回</a></li>
 
+<br>
 <?php
 
 echo "*";

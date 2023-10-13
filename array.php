@@ -1,3 +1,5 @@
+<li><a href="index.html">返回</a></li>
+
 <?php
 
 
@@ -28,6 +30,7 @@ print_r($b);
 echo "</pre>";
 
 echo $b['姓名'];
+
 echo $b['tel'];
 
 $c=[];
