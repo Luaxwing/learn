@@ -1,4 +1,11 @@
 <?php include '../myfunction.php'; ?>
+
+<style>
+    .hid{
+        background-color: rgb(242,242,242);
+        color:white;
+    }
+</style>
 <li><a href="P_list.html">返回</a></li>
 
 <h2>已知西元1024年為甲子年，請設計一支程式，可以接受任一西元年份，輸出對應的天干地支的年別。(利用迴圈)</h2>
@@ -16,7 +23,7 @@
 // 下一個子年為1036
 // ------------------------
 // 資料的部分
-$year=2000;
+$year=2500;
 $oryear=1024;
 $num=$year-$oryear;
 // 主要的資料
@@ -38,7 +45,7 @@ for($i=0;$i<=$num;$i++){
 
 // ---------------------
 // 查詢的部分
-$inputnum=2000;
+$inputnum=2023;
 $result=$yearslist[$inputnum-1024];
 // print_r($result);
 
@@ -46,7 +53,10 @@ echo"$inputnum".  "&nbsp;年為&nbsp;" ."$result"."&nbsp;年";
 
 br_(2);
 
+echo"<hr>";
+echo"<div class=hid>";
 echo "下界為&nbsp;".$oryear."&nbsp;上界為&nbsp;".$year;
+echo"</div>";
 
 ?>
 <?php
