@@ -22,7 +22,7 @@ while($flag=="沒找到"){
 
 
 
-echo "找到了;位置在".$pos;
+echo "找到了:位置在".$pos;
 echo "<br>";
 echo "原始字串-$source";
 echo "<br>" ;

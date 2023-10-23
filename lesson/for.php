@@ -1,4 +1,4 @@
-<li><a href="index.html">返回</a></li>
+<li><a href="../index.html">返回</a></li>
 <a href="while.php">while <br></a>
 <?php
 $SUM=0;

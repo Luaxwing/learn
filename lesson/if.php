@@ -1,4 +1,4 @@
-<li><a href="index.html">返回</a></li>
+<li><a href="../index.html">返回</a></li>
 <?php
 
 $score=75;

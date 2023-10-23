@@ -6,7 +6,7 @@
     <title>PHP基礎</title>
 </head>
 <body>
-<li><a href="index.html">返回</a></li>
+<li><a href="../index.html">返回</a></li>
 <?php
 define('age',23); 
 // $age=23;
