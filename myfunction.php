@@ -20,6 +20,20 @@ function brline($str){
 }
 
 
+
+ function brline_($str,$n){
+    br_($n);
+     echo $str;
+    br_($n);
+ }
+ 
+ function brline__($str,$n,$space){
+    br_($n);
+    space_($space);
+     echo $str;
+    br_($n);
+ }
+
 // 空格
 
 
@@ -27,6 +41,15 @@ function space()
 {
     echo '&nbsp&nbsp';
 }
+
+function space_($n)
+{
+    for ($i = 0; $i < $n; $i++) {
+        echo '&nbsp&nbsp';
+    }
+
+}
+
 
 
 

@@ -20,6 +20,7 @@
         text-align: center;
     }
 </style>
+<li><a href="P_list.html">返回</a></li>
 
 <?php
 $subject = ["國文", "英文", "數學", "地理", "歷史"];
