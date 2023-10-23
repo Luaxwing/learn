@@ -11,9 +11,33 @@ function br_($n)
         echo "<br>";
     }
 }
+
+
+function brline($str){
+   br();
+    echo $str;
+   br();
+}
+
+
+// 空格
+
+
 function space()
 {
     echo '&nbsp&nbsp';
+}
+
+
+
+//輸出(原格式)
+
+function pre($n){
+    if($n=1){
+        echo "<pre>";
+    }elseif($n=0){
+        echo "</pre>";
+    }
 }
 
 ?>
