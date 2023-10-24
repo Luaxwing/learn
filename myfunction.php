@@ -1,6 +1,12 @@
+
+
+
 <?php
 // 斷行
-
+function hr()
+{
+    echo '<hr>';
+}
 function br()
 {
     echo '<br>';
@@ -51,16 +57,17 @@ function space_($n)
 }
 
 
-
-
-//輸出(原格式)
-
-function pre($n){
-    if($n=1){
-        echo "<pre>";
-    }elseif($n=0){
-        echo "</pre>";
-    }
+// 表格方便使用
+function td($str){
+    echo "<td>".$str."</td>";
 }
 
+function th($str){
+    echo "<th>".$str."</th>";
+}
+
+
 ?>
+
+
+
