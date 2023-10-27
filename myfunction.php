@@ -67,6 +67,13 @@ function th($str){
 }
 
 
+function pre(){
+    echo "<pre>";
+}
+
+function pre_Slash(){
+    echo "</pre>";
+}
 ?>
 
 

@@ -38,9 +38,9 @@ echo str_repeat("*",mb_strlen($s));
 br();
 $s="this,is,a,book";
 $a = explode(",", $s);
-pre(1);
+echo "<pre>";
 print_r($a);
-pre(0);
+echo "</pre>";
 br();
 
 ?></div>

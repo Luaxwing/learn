@@ -8,16 +8,16 @@
 </ul>
 <?php
 $a=[2,4,6,1,8];
-pre(1);
+echo "<pre>";
 print_r($a);
-pre(0);
+echo "</pre>";
 
 br();
 echo"array_reverse";
 
-pre(1);
+echo "<pre>";
 print_r(array_reverse($a));
-pre(0);
+echo "</pre>";
 
 for($i=0;$i<floor(count($a)/2);$i++){
     $tmp=$a[$i];
@@ -30,9 +30,9 @@ for($i=0;$i<floor(count($a)/2);$i++){
 br();
 echo"使用迴圈兩兩交換";
 
-pre(1);
+echo "<pre>";
 print_r($a);
-pre(0);
+echo "</pre>";
 
 ?>
 
