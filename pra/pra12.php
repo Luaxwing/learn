@@ -44,8 +44,8 @@
     ?>
     <form action="<?php echo "pra12_bmi.php";?>" method="post" id="myform">
         <?php 
-        if(!empty($_GET['weight']))
-        {$test=$_GET['weight'];
+        if(!empty($_GET['m']))
+        {$test=$_GET['m'];
         if($test=="none"){echo"<span class=warning>請輸入正確的值</span>";}
     }
         

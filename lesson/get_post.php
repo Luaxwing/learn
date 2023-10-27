@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <li><a href="../index.html">返回</a></li>
+<li><a href="../pra/pra12.php">練習I</a></li>
+<li><a href="../pra/pra13.php">練習II</a></li>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

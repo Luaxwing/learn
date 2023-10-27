@@ -36,7 +36,7 @@ if(is_numeric($h)&&is_numeric($w)){
 }else{
     // echo"請輸入正確的資料";
     $none="none";
-    header("location:pra12.php?weight=$none");
+    header("location:pra12.php?m=$none");
 }
 
 

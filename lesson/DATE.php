@@ -1,6 +1,9 @@
 
 <?php include '../myfunction.php'; ?>
 <li><a href="../index.html">返回</a></li>
+
+<li><a href="../pra/pra10.php">練習I</a></li>
+<li><a href="../pra/pra11.php">練習II</a></li>
 <h1>日期與時間</h1>
 
 <?php
