@@ -1,3 +1,5 @@
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 <?php include '../myfunction.php'; ?>
 
 <style>

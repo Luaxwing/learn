@@ -1,4 +1,6 @@
-<li><a href="P_list.html">返回</a></li>
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 <h1>尋找字串</h1>
 <?php
 $source="印出尋找到的單字或字母所在句子中的位置";

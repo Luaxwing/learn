@@ -1,4 +1,6 @@
-<li><a href="P_list.html">返回</a></li>
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 
 
 <h2>閏年判斷，給定一個西元年份，判斷是否為閏年</h2>

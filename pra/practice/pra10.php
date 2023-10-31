@@ -1,5 +1,7 @@
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 <?php include '../myfunction.php'; ?>
-<li><a href="P_list.html">返回</a></li>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 
 <h2>利用date()函式的格式化參數，完成以下的日期格式呈現</h2>
 <ul>

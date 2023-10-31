@@ -1,4 +1,6 @@
-<li><a href="../index.html">返回</a></li>
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
+<!-- <li><a href="../index.html">返回</a></li> -->
 <a href="for.php">for <br></a>
 <?php
 

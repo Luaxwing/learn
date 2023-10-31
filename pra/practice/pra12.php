@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算</title>
+        <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
     <style>
     table,tr,th,td{
         border: 1px solid black;

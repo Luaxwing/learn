@@ -1,3 +1,5 @@
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 <?php include '../myfunction.php'; ?>
 <style>
 .container{
@@ -13,7 +15,7 @@ span.keyword{
 }
 
 </style>
-<li><a href="P_list.html">返回</a></li>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 <ul>
 <h2>字串取代</h2>
 

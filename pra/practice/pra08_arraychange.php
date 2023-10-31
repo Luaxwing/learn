@@ -1,5 +1,7 @@
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 <?php include '../myfunction.php'; ?>
-<li><a href="P_list.html">返回</a></li>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 
 <h2>請設計一支程式，在不產生新陣列的狀況下，將一個陣列的元素順序反轉(利用迴圈)</h2>
 <ul>

@@ -1,0 +1,140 @@
+
+.year {
+    display: inline;
+    font-size: 40px;
+    margin-bottom: -49px;
+}
+
+.todate {
+    width: 100%;
+    padding-top: 11px;
+    font-size: 20px;
+}
+
+.clocktd{
+    width: 100%;
+}
+.clock{
+    width: 150px;
+    height: 150px;
+    background-image: url(./clock/clock_bg.png);
+    background-size:contain;
+}
+.timerun{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(179, 179, 179);
+    position: relative;
+    animation-name: time;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes time {
+    /* 0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:150px; top:0px;}
+    50%  {background-color:blue; left:150px; top:150px;}
+    75%  {background-color:green; left:0px; top:150px;}
+    100% {background-color:red; left:0px; top:0px;} */
+    0%{left:70px; top:5px;}
+    12.5%{left:113.2px; top:26.8px;}
+    25%{left: 130px; top:70px}
+    37.5%{left:118.2px; top:112.5px;}
+    50%{left: 70px; top:135px}
+    62.5%{left:22.5px; top:112.5px;}
+    75%{left: 5px; top:70px}
+    87.5%{left:27.5px; top:26.8px;}
+    100%{left:70px; top:5px;}
+
+  }
+
+.showdate{
+    width: 100%;
+    text-align: left;
+}
+
+.pagebuttom {
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(116, 116, 116);
+    border: 5px solid rgb(116, 116, 116);
+    color: white;
+}
+
+.pagebuttom:hover {
+    text-decoration: none;
+    background-color: rgb(166, 166, 166);
+    border: 5px solid rgb(166, 166, 166);
+    color: white;
+}
+
+.pagebuttom_group {
+    margin-left: 92.5%;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+
+.resetbuttom {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: -7px;
+    margin-bottom: -18px;
+}
+
+.calendar {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(65, 69, 72,0.9);
+}
+
+.header {
+    background-color: #414548;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.footer{
+    background-color: rgb(65, 69, 72);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.month {
+    font-size: 20px;
+    margin-left: 1px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #f2f2f2;
+    height: 30px;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table td:hover {
+    background-color: #f2f2f2;
+    color: #414548;
+}
+
+.table .today_HL {
+    background-color: rgb(77, 159, 231);
+
+}

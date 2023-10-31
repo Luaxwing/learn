@@ -1,7 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<li><a href="../index.html">返回</a></li>
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
+<!-- <li><a href="../index.html">返回</a></li> -->
 <li><a href="../pra/pra12.php">練習I</a></li>
 <li><a href="../pra/pra13.php">練習II</a></li>
 <head>

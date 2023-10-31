@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP基礎</title>
+        <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 </head>
 <body>
-<li><a href="../index.html">返回</a></li>
+<!-- <li><a href="../index.html">返回</a></li> -->
 <?php
 define('age',23); 
 // $age=23;

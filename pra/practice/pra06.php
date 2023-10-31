@@ -1,5 +1,7 @@
+    <link rel="stylesheet" href="../header_style.css">
+ <?php include_once "../header.php"; ?>
 <?php include '../myfunction.php'; ?>
-<li><a href="P_list.html">返回</a></li>
+<!-- <li><a href="P_list.html">返回</a></li> -->
 
 <h2>找出五百年內的閏年</h2>
 <ul>
