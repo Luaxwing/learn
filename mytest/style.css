@@ -15,6 +15,10 @@ td{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+footer{
+    height:20vh;
+}
 .top{
     margin-top: 40px;
 }
