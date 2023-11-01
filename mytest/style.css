@@ -1,0 +1,38 @@
+*{
+    font-size: 20px;
+}
+table,th,tr,td{
+    border: 1px solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+input[type=text]{
+width: 80px;
+}
+
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.top{
+    margin-top: 40px;
+}
+.container{
+    margin-left: 40px;
+}
+
+.resetbuttom{
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 2px;
+    background-color: rgb(239, 239, 239);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px;
+
+}
+
+.resetbuttom:hover{
+    background-color: rgb(212, 212, 212);
+}
+

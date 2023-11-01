@@ -21,7 +21,6 @@
 
 <ul>
     <!-- 上課內容 -->
-    echo $a ; ?>
     <li><a href="./lesson/ver.php">一、變數</a></li>
     <li><a href="./lesson/if.php">二、if 判斷式</a></li>
     <li><a href="./lesson/for.php">三、迴圈</a></li>
@@ -31,6 +30,7 @@
     <li><a href="./lesson/get_post.php">七、網頁傳值</a></li>
     <br><br><hr><br>
     <li><a href="./pra/P_list.html">課堂練習</a></li>
+    <li><a href="./mytest">測試</a></li>
 </ul>
 <link rel="stylesheet" href="./calendar/calendar.css">
 <?php include './calendar/calendar.php';
