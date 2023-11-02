@@ -30,7 +30,7 @@ session_start();
   <body>
   <div class="top"><br></div>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-      <input type="file" name="excelFile">
+      <input type="file" name="excelFile" accept=".csv">
       <input type="submit" value="上傳CSV">
     </form>
     <br>
@@ -42,6 +42,7 @@ session_start();
       // if(!empty($_SESSION['price'])){
       //   $price=$_SESSION['price'];
       // }
+      if(!is_numeric($order[1][0])) {die("出現錯誤：未上傳正確的檔案");}
       $price = $_SESSION['price'];
 
       if (!empty($_SESSION['pay'])) {
@@ -51,8 +52,11 @@ session_start();
       // print_r($order);
     
       $num = count($order) - 2;
+      $sum=sumprice(count($order));
+      
 
-      echo "共" . $num . "人";
+      echo "共&nbsp;" . $num . "&nbsp;人訂餐";
+      echo "&nbsp;合計&nbsp;" . $sum . "&nbsp;元";
       ?>
       <br>
       <br>
@@ -66,7 +70,6 @@ session_start();
           <th>找回</th>
         </tr>
         <?php
-
         for ($i = 1; $i < count($order) - 1; $i++) {
           if (!empty($pay[$i])) {
             if ($pay[$i] != 0) {
@@ -86,7 +89,7 @@ session_start();
 
 
           for ($j = 0; $j <= 2; $j++) {
-            echo "<td id=$i-$j>";
+            echo "<td class=price$j>";
             echo $order[$i][$j];
             echo "</td>";
           }
@@ -96,7 +99,20 @@ session_start();
           <?php
           if (!empty($pay[$i]) && $pay[$i] != 0 && $balance == 0) {
             echo "已付款";
-          } else {
+          } elseif(!empty($pay[$i]) && $pay[$i] != 0 ){
+            // echo $price[$i];
+            ?>
+            
+            <form action="calculate.php" method="post">
+            <input type="text" name="data<?= $i ?>" id="the.<?= $i ?>.sendbuttom" value="<?=$price[$i]?>" style="width:0px;opacity: 0;">
+              <input type="submit" value="完成" style="margin-left:-15px;">
+            </form>
+            
+            
+            
+            <?php
+          }
+          else {
             ?>
             <form action="calculate.php" method="post">
               <input type="text" name="data<?= $i ?>" id="the.<?= $i ?>.sendbuttom">
@@ -109,7 +125,7 @@ session_start();
           echo "<td >";
           if (!empty($pay[$i])) {
             if ($pay[$i] != 0) {
-              balance($balance);
+              balance($balance,$i);
             }
 
           }
@@ -127,6 +143,7 @@ session_start();
 
 
       </table>
+      
       <br>
       <hr>
       <a href="reset.php" class="resetbuttom">重置</a>
@@ -158,18 +175,28 @@ session_start();
   // }
   
 
+function sumprice($countorder){
+  $sumprice=0;
+  for ($i = 1; $i <= $countorder-2; $i++){
+    $sumprice += $_SESSION['price'][$i];
+  }
+  return $sumprice;
+}
 
 
-
-  function balance($balance)
+  function balance($balance,$i)
   {
     // $balance = $pay[$i] - $price[$i];
     if ($balance > 0) {
+      // echo"<a href=calculate.php?data$i=$balance class=balbuttom>";
       echo "找" . $balance . "元";
+      // echo'</a>';
     } elseif ($balance == 0) {
       echo "V";
     } else {
+      // echo"<a href=calculate.php?data$i=$balance class=balbuttom>";
       echo "少" . abs($balance) . "元";
+      // echo'</a>';
     }
   }
 

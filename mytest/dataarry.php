@@ -35,12 +35,14 @@ echo"</pre>";
 
 for($i=1;$i<=count($tmparry)-2;$i++){
     $price[$i]=$tmparry[$i][2];
-
+    
 }
 
 $_SESSION['orderlist']=$tmparry;
 $_SESSION['price']=$price;
 // print_r($_SESSION['orderlist']);
+
+
 
 header("location:index.php ") ; 
 ?>
