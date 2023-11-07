@@ -1,0 +1,157 @@
+/* *{
+    font-family: 'Vivaldi';
+
+} */
+
+a{
+    margin-left: 2px;
+    color: white;
+    font-family: 'Vladimir Script';
+    font-size:20px;
+}
+
+body{
+    background-image: url(./bg/retro.gif);
+    background-size:100% 120%;
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    /* margin-left: -5%; */
+    height: 75vh;
+
+   
+}
+.nav{
+    width: 99%;
+    height: 10vh;
+    background-color:  rgb(0, 0, 0);
+    border: 3px solid rgb(211, 35, 179) ;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.year {
+    display: inline;
+    font-size: 40px;
+    margin-bottom: -49px;
+    font-family: 'Vladimir Script';
+}
+
+.todate {
+    width: 100%;
+    padding-top: 11px;
+    font-size: 20px;
+    font-family: 'Vladimir Script';
+}
+
+
+
+.showdate{
+    width: 100%;
+    text-align: left;
+    font-family: 'Vivaldi';
+}
+
+.pagebuttom {
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(239, 97, 255);
+    color: white;
+}
+
+.pagebuttom:hover {
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(219, 16, 242);
+    color: white;
+}
+
+.pagebuttom_group {
+    margin-left: 92.5%;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+
+.resetbuttom {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: -7px;
+    margin-bottom: -18px;
+}
+
+.calendar {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    /* border-radius: 10px; */
+    box-shadow: 0 0 10px rgba(239, 97, 255, 0.989);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+th{
+    font-family: 'Vladimir Script';
+    
+}
+.footer{
+    background-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.month {
+    font-size: 20px;
+    margin-left: 1px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid rgb(203, 49, 220);
+    color: #f2f2f2;
+    height: 30px;
+    
+    /* font-family: 'Vivaldi'; */
+}
+
+.table td {
+    text-align: center;
+    font-family: 'Vivaldi'
+}
+
+.table td:hover {
+
+    border:1px solid rgb(255, 255, 255);
+    box-shadow: rgb(245, 186, 251)  0px 0px 10px 5px;
+    box-sizing: border-box;
+}
+
+.table .today_HL {
+
+
+    background-color: rgba(239, 97, 255, 0.5);
+    /* box-shadow:10px #ffffff; */
+   
+    /* background-color: rgb(77, 159, 231); */
+
+}

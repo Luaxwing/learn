@@ -7,7 +7,7 @@
     <title>Calendar</title>
     <?php include_once 'myfunction.php'; ?>
 
-    <link rel="stylesheet" href="calendar.css">
+    <!-- <link rel="stylesheet" href="calendar.css"> -->
 
 </head>
 
@@ -206,13 +206,6 @@
                     <td class="todate">
                         <?php echo " &nbsp;&nbsp;<span >" . $month_str . "-" . $today . "&nbsp;&nbsp;" . $date_wek . "</span>"; ?>
                     </td>
-                    <td class="clocktd">
-                        <!-- <div class="clock">
-                        <div class="timerun">
-                        </div>
-                        </div> -->
-                        <img src="./clock/clock.gif" alt="" srcset=""style="width:150px">
-                    </td>
                 </tr>
             </table>
 
@@ -227,13 +220,23 @@
         echo " </div>";
         echo "<table class=table>";
         echo "<tr>";
-        echo "<th>" . "日" . "</th>";
-        echo "<th>" . "一" . "</th>";
-        echo "<th>" . "二" . "</th>";
-        echo "<th>" . "三" . "</th>";
-        echo "<th>" . "四" . "</th>";
-        echo "<th>" . "五" . "</th>";
-        echo "<th>" . "六" . "</th>";
+        if ($_GET["tmp_bright"] == 2) {
+        echo "<th>" . "SUN" . "</th>";
+        echo "<th>" . "MON" . "</th>";
+        echo "<th>" . "TUE" . "</th>";
+        echo "<th>" . "WED" . "</th>";
+        echo "<th>" . "THUR" . "</th>";
+        echo "<th>" . "FRI" . "</th>";
+        echo "<th>" . "SAT" . "</th>"; 
+        }else{
+            echo "<th>" . "日" . "</th>";
+            echo "<th>" . "一" . "</th>";
+            echo "<th>" . "二" . "</th>";
+            echo "<th>" . "三" . "</th>";
+            echo "<th>" . "四" . "</th>";
+            echo "<th>" . "五" . "</th>";
+            echo "<th>" . "六" . "</th>";
+        }
         echo "</tr>";
 
         for ($i = 0; $i < 6; $i++) {
@@ -253,12 +256,12 @@
         <footer class="footer">
             <br>
             <div class="resetbuttom">
-                <a href="?year=<?= date("Y") ?>&month=<?= date("m") ?>" class="pagebuttom"> Reset </a>
+                <a href="?year=<?= date("Y") ?>&month=<?= date("m") ?>&bright=<?=$_GET['tmp_bright']?>" class="pagebuttom"> Reset </a>
             </div>
             <div class="pagebuttom_group">
-                <a href="?year=<?= $preyear ?>&month=<?= $prev ?>" class="pagebuttom">
+                <a href="?year=<?= $preyear ?>&month=<?= $prev ?>&bright=<?=$_GET['tmp_bright']?>" class="pagebuttom">
                     <| </a>
-                        <a href="?year=<?= $nextyear ?>&month=<?= $next ?>" class="pagebuttom">|></a>
+                        <a href="?year=<?= $nextyear ?>&month=<?= $next ?>&bright=<?=$_GET['tmp_bright']?>" class="pagebuttom">|></a>
 
             </div>
             <br>

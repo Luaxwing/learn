@@ -1,3 +1,45 @@
+a{
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(116, 116, 116);
+    border: 5px solid rgb(116, 116, 116);
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    background-color: rgb(166, 166, 166);
+    border: 5px solid rgb(166, 166, 166);
+    color: white;
+
+}
+
+
+body{
+    background-image: url(./bg/darken.gif);
+    background-size:100% 120%;
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+
+.nav{
+    width: 120%;
+    height: 10vh;
+    background-color:  rgb(65, 69, 72);
+    margin-left: -5%;
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-left:5% ;
+    
+}
+
+.container{
+    width: 100%;
+    /* margin-left: -5%; */
+    height: 75vh;
+
+   
+}
 
 .year {
     display: inline;
@@ -14,13 +56,13 @@
 .clocktd{
     width: 100%;
 }
-.clock{
+/* .clock{
     width: 150px;
     height: 150px;
     background-image: url(./clock/clock_bg.png);
     background-size:contain;
-}
-.timerun{
+} */
+/* .timerun{
     width: 10px;
     height: 10px;
     background-color: rgb(179, 179, 179);
@@ -28,14 +70,14 @@
     animation-name: time;
     animation-duration: 60s;
     animation-iteration-count: infinite;
-}
-
+} */
+/* 
 @keyframes time {
-    /* 0%   {background-color:red; left:0px; top:0px;}
+    0%   {background-color:red; left:0px; top:0px;}
     25%  {background-color:yellow; left:150px; top:0px;}
     50%  {background-color:blue; left:150px; top:150px;}
     75%  {background-color:green; left:0px; top:150px;}
-    100% {background-color:red; left:0px; top:0px;} */
+    100% {background-color:red; left:0px; top:0px;}
     0%{left:70px; top:5px;}
     12.5%{left:113.2px; top:26.8px;}
     25%{left: 130px; top:70px}
@@ -46,7 +88,7 @@
     87.5%{left:27.5px; top:26.8px;}
     100%{left:70px; top:5px;}
 
-  }
+  } */
 
 .showdate{
     width: 100%;

@@ -1,0 +1,139 @@
+
+body{
+    background-image: url(./bg/night.gif);
+    background-size:100% 120%;
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    /* margin-left: -5%; */
+    height: 75vh;
+
+   
+}
+.nav{
+    width: 120%;
+    height: 10vh;
+    background-color:  rgb(35, 128, 211);
+    margin-left: -5%;
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-left:5% ;
+    
+}
+
+
+
+.year {
+    display: inline;
+    font-size: 40px;
+    margin-bottom: -49px;
+}
+
+.todate {
+    width: 100%;
+    padding-top: 11px;
+    font-size: 20px;
+}
+
+.clocktd{
+    width: 100%;
+}
+
+
+.showdate{
+    width: 100%;
+    text-align: left;
+}
+
+.pagebuttom {
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(254, 254, 254);
+    border: 5px solid rgb(255, 255, 255);
+    color: rgb(77, 159, 231);
+    border-radius: 10px;
+}
+
+.pagebuttom:hover {
+    text-decoration: none;
+    background-color: rgb(149, 203, 249);
+    border: 5px solid rgb(149, 203, 249);
+    color: white;
+    border-radius: 10px;
+}
+
+.pagebuttom_group {
+    margin-left: 92.5%;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+
+.resetbuttom {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: -7px;
+    margin-bottom: -18px;
+}
+
+.calendar {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 7px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(244, 244, 244, 0.5);
+}
+
+.header {
+    background-color:rgb(35, 128, 211);
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+ 
+}
+.footer{
+    background-color: rgb(35, 128, 211);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.month {
+    font-size: 20px;
+    margin-left: 1px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid rgb(76,76,255);
+    color: rgb(26, 95, 155);
+    height: 30px;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table td:hover {
+    background-color: rgb(77, 159, 231);
+    color: #feffff;
+}
+
+.table .today_HL {
+    background-color: rgb(94, 176, 248);
+    color: #feffff;
+
+}
