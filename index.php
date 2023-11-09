@@ -12,6 +12,16 @@
             width: 120%;
             background-color: blue;
         }
+        .putin{
+            width: 100%;
+            text-align: center;
+        }
+        iframe{
+            width: 850px;
+            height:750px;
+            
+        }
+
     </style>
 </head>
 <body>
@@ -30,11 +40,16 @@
     <li><a href="./lesson/get_post.php">七、網頁傳值</a></li>
     <br><br><hr><br>
     <li><a href="./pra/P_list.html">課堂練習</a></li>
+ 
     <li><a href="./mytest">測試</a></li>
+    <li><a href="./calendar">萬年曆</a></li>
 </ul>
-<link rel="stylesheet" href="./calendar/calendar.css">
-<?php include './calendar/calendar.php';
-?>
+<div class="putin">
+<iframe src="./calendar/index.php" frameborder="0"></iframe>
+</div>
+
+
+
 
 
 </body>

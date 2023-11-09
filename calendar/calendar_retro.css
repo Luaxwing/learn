@@ -17,6 +17,12 @@ body{
     overflow: hidden;
 }
 
+input{
+    background-color: #000000;
+    color: white;
+    font-family: 'Vivaldi';
+}
+
 .container{
     width: 100%;
     /* margin-left: -5%; */

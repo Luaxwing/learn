@@ -16,6 +16,13 @@
     <!-- 更換月份 -->
     <?php
 
+    if (!empty($_POST['monthdat']) && isset($_POST['yeardat'])&& is_numeric($_POST['yeardat'])) {
+        $_GET['year']=$_POST['yeardat'];
+    }
+    if (!empty($_POST['monthdat']) && isset($_POST['monthdat'])&& is_numeric($_POST['monthdat'])) {
+        $_GET['month']=$_POST['monthdat'];
+    }
+  
     if (isset($_GET['month'])) {
         $month = $_GET['month'];
         $year = $_GET['year'];
@@ -39,6 +46,7 @@
     } else {
         $prev = $month - 1;
     }
+    
 
     ?>
 
@@ -107,7 +115,7 @@
     }
 
 
-    switch (date("m", strtotime("ow"))) {
+    switch (date("m", strtotime("now"))) {
 
         case 1:
             $month_str = "January";
@@ -206,6 +214,7 @@
                     <td class="todate">
                         <?php echo " &nbsp;&nbsp;<span >" . $month_str . "-" . $today . "&nbsp;&nbsp;" . $date_wek . "</span>"; ?>
                     </td>
+
                 </tr>
             </table>
 
@@ -217,6 +226,14 @@
         echo " <div class=showdate>";
         echo " <span class=month>" . $year . "&nbsp;&nbsp;" . $mon_str . "</span>";
         echo " </div>";
+        ?>                   
+        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
+            <input type="text" name="yeardat"  placeholder="what Year?" required>
+            <input type="text" name="monthdat"  placeholder="what Month is it?" required>
+            <input type="submit" value="Search">
+        </form>
+        
+        <?php
         echo " </div>";
         echo "<table class=table>";
         echo "<tr>";
@@ -299,3 +316,4 @@
         ?>
     </div>
     <br>
+

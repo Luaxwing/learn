@@ -1,4 +1,10 @@
 
+a{
+    font-size: 15px;
+    background-color: rgb(35, 128, 211);
+    border: 5px solid rgb(35, 128, 211);
+}
+
 body{
     background-image: url(./bg/night.gif);
     background-size:100% 120%;
