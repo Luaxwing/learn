@@ -8,6 +8,12 @@
     <?php include_once 'myfunction.php'; ?>
 
     <!-- <link rel="stylesheet" href="calendar.css"> -->
+    <style>
+        .dontshow{
+            opacity: 0;
+            width: 0vh;
+        }
+    </style>
 
 </head>
 
@@ -227,9 +233,10 @@
         echo " <span class=month>" . $year . "&nbsp;&nbsp;" . $mon_str . "</span>";
         echo " </div>";
         ?>                   
-        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
+        <form action="i_cal.php" method="post">
             <input type="text" name="yeardat"  placeholder="what Year?" required>
             <input type="text" name="monthdat"  placeholder="what Month is it?" required>
+            <input type="text" name="tmp" value="<?=$_GET['tmp_bright']?>" class="dontshow">
             <input type="submit" value="Search">
         </form>
         

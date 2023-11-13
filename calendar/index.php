@@ -14,12 +14,12 @@
         margin-top:-0.5%;
         margin-left:-0.5%;
         width: 101%;
-        height: 105vh;
+        height: 100vh;
     }
 </style>
 <body>
     <div class="iframe">
-        <iframe src="i_cal.php" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="i_cal.php" frameborder="0" width="100%" height="150%"></iframe>
     </div>
     
 </body>

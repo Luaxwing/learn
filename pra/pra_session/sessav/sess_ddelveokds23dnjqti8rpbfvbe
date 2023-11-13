@@ -1,0 +1,112 @@
+ PMA_token |s:32:"3c702a29274a512f502155542f383045"; HMAC_secret |s:16:"5Rkhclhw|wc'HFx3";browser_access_time|a:14:{s:7:"default";i:1699834666;s:36:"02c52fb8-7648-dbf4-cae6-cafd568dbd52";i:1699583087;s:36:"9930c31a-3186-a0fd-a3ee-612030755b9f";i:1699582593;s:36:"53b951f8-30a6-7154-4dd6-e170974e6bf1";i:1699582753;s:36:"af333cb3-900d-5081-7eac-7c7295cfdc28";i:1699593385;s:36:"bb8bcd3e-2a45-f0a7-df1c-626f29104fbd";i:1699603949;s:36:"c9f957af-2eca-709c-b86a-e46687aa5178";i:1699600714;s:36:"eaddf646-a606-b96f-75ac-74fb6d83cea4";i:1699600763;s:36:"57aef228-95d0-ae9c-a988-f4ac19daf39d";i:1699595528;s:36:"527080ed-5ab0-8b1e-c237-7d9dda7bd710";i:1699596015;s:36:"06a7add1-b2c7-3b1b-8920-1960258c3b3f";i:1699597805;s:36:"7b3da7ec-6058-6ce4-cdf8-4b3ff531b721";i:1699600800;s:36:"308e7ace-5d67-46b9-f4ca-9adbd9b9e595";i:1699604083;s:36:"912d2da1-9726-c52d-3f99-40d4671c342d";i:1699602973;}relation|a:1:{i:1;a:41:{s:7:"version";s:5:"5.2.1";s:4:"user";s:4:"root";s:2:"db";s:10:"phpmyadmin";s:8:"bookmark";s:13:"pma__bookmark";s:15:"central_columns";s:20:"pma__central_columns";s:11:"column_info";s:16:"pma__column_info";s:17:"designer_settings";s:22:"pma__designer_settings";s:16:"export_templates";s:21:"pma__export_templates";s:8:"favorite";s:13:"pma__favorite";s:7:"history";s:12:"pma__history";s:16:"navigationhiding";s:21:"pma__navigationhiding";s:9:"pdf_pages";s:14:"pma__pdf_pages";s:6:"recent";s:11:"pma__recent";s:8:"relation";s:13:"pma__relation";s:13:"savedsearches";s:18:"pma__savedsearches";s:12:"table_coords";s:17:"pma__table_coords";s:10:"table_info";s:15:"pma__table_info";s:13:"table_uiprefs";s:18:"pma__table_uiprefs";s:8:"tracking";s:13:"pma__tracking";s:10:"userconfig";s:15:"pma__userconfig";s:10:"usergroups";s:15:"pma__usergroups";s:5:"users";s:10:"pma__users";s:12:"bookmarkwork";b:1;s:8:"mimework";b:1;s:18:"centralcolumnswork";b:1;s:8:"commwork";b:1;s:9:"menuswork";b:1;s:20:"designersettingswork";b:1;s:11:"displaywork";b:1;s:19:"exporttemplateswork";b:1;s:12:"favoritework";b:1;s:7:"navwork";b:1;s:7:"pdfwork";b:1;s:10:"recentwork";b:1;s:7:"relwork";b:1;s:17:"savedsearcheswork";b:1;s:11:"historywork";b:1;s:12:"trackingwork";b:1;s:11:"uiprefswork";b:1;s:14:"userconfigwork";b:1;s:8:"allworks";b:1;}}tmpval|a:16:{s:14:"favoriteTables";a:1:{i:1;a:0:{}}s:12:"recentTables";a:1:{i:1;a:10:{i:0;a:2:{s:2:"db";s:6:"school";s:5:"table";s:4:"dept";}i:1;a:2:{s:2:"db";s:6:"school";s:5:"table";s:13:"class_student";}i:2;a:2:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";}i:3;a:2:{s:2:"db";s:6:"school";s:5:"table";s:7:"classes";}i:4;a:2:{s:2:"db";s:6:"school";s:5:"table";s:14:"student_scores";}i:5;a:2:{s:2:"db";s:6:"school";s:5:"table";s:15:"graduate_school";}i:6;a:2:{s:2:"db";s:6:"school";s:5:"table";s:6:"status";}i:7;a:2:{s:2:"db";s:10:"old_school";s:5:"table";s:8:"students";}i:8;a:2:{s:2:"db";s:10:"old_school";s:5:"table";s:10:"department";}i:9;a:2:{s:2:"db";s:6:"school";s:5:"table";s:10:"department";}}}s:18:"table_limit_offset";i:0;s:21:"table_limit_offset_db";s:6:"school";s:13:"table_uiprefs";a:1:{i:1;a:1:{s:6:"school";a:7:{s:8:"students";a:2:{s:11:"CREATE_TIME";s:19:"2023-11-06 10:53:53";s:10:"sorted_col";s:8:"`id` ASC";}s:4:"dept";a:0:{}s:6:"status";a:0:{}s:15:"graduate_school";a:0:{}s:7:"classes";a:0:{}s:13:"class_student";a:0:{}s:14:"student_scores";a:0:{}}}}s:5:"query";a:10:{s:32:"6f6bab10173fa571ba907f7e749a6031";a:8:{s:3:"sql";s:777:"SELECT  ROW_NUMBER() OVER (ORDER BY 
+(select `student_scores`.`score`
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC)A.`score` ASC) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"018da63306e74302d0dd9be180b77dd2";a:8:{s:3:"sql";s:876:"SELECT  ROW_NUMBER() OVER (ORDER BY
+(SELECT `students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績' FROM `students`,`student_scores`,`class_student`,`classes` WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && `class_student`.`class_code`=`classes`.`code` ORDER BY `student_scores`.`score` DESC).'成績') as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"625a5c2bbcba75b628e27578a70a0c33";a:8:{s:3:"sql";s:770:"SELECT  ROW_NUMBER() OVER (ORDER BY
+(SELECT  `student_scores`.`score` as  FROM `students`,`student_scores`,`class_student`,`classes` WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && `class_student`.`class_code`=`classes`.`code` ORDER BY `student_scores`.`score` DESC).`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"0280567eda8682f0bb32001798f87c1d";a:8:{s:3:"sql";s:780:"SELECT  ROW_NUMBER() OVER (ORDER BY `A`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` ,
+
+(SELECT  `student_scores`.`score` as  FROM `students`,`student_scores`,`class_student`,`classes` WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && `class_student`.`class_code`=`classes`.`code` ORDER BY `student_scores`.`score` DESC)A
+
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"e6d204aa99a09171193225138b3bec58";a:8:{s:3:"sql";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"22edaa393a3c1b3aea455e8faba5327c";a:8:{s:3:"sql";s:460:"SELECT  ROW_NUMBER() OVER (ORDER BY Int) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"4df8d7c316985e43ddbd51161d8d2e24";a:8:{s:3:"sql";s:24:"SELECT * FROM `students`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"05c7770504489a03fabe9e05d290b9e3";a:8:{s:3:"sql";s:43:"SELECT * FROM `students` ORDER BY `id` ASC ";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"51b9d4d50ac11e6a7f642bfc09509b22";a:8:{s:3:"sql";s:29:"SELECT * FROM `class_student`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"46721096154931907147ed6b19116848";a:8:{s:3:"sql";s:20:"SELECT * FROM `dept`";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}}s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;s:12:"display_blob";b:0;s:19:"hide_transformation";b:0;s:3:"pos";i:0;s:8:"max_rows";i:25;s:12:"repeat_cells";i:100;s:20:"possible_as_geometry";b:1;}two_factor_check|b:1;cache|a:3:{s:8:"server_1";a:3:{s:15:"userprefs_mtime";i:1699602990;s:14:"userprefs_type";s:2:"db";s:12:"config_mtime";i:1447170388;}s:13:"server_1_root";a:17:{s:17:"is_create_db_priv";b:1;s:14:"is_reload_priv";b:1;s:12:"db_to_create";s:0:"";s:30:"dbs_where_create_table_allowed";a:1:{i:0;s:1:"*";}s:11:"dbs_to_test";b:0;s:9:"proc_priv";b:1;s:10:"table_priv";b:1;s:8:"col_priv";b:1;s:7:"db_priv";b:1;s:11:"binary_logs";a:0:{}s:18:"menu-levels-server";a:13:{s:9:"databases";s:9:"資料庫";s:3:"sql";s:3:"SQL";s:6:"status";s:6:"狀態";s:6:"rights";s:9:"使用者";s:6:"export";s:6:"匯出";s:6:"import";s:6:"匯入";s:8:"settings";s:6:"設定";s:6:"binlog";s:15:"二進位記錄";s:11:"replication";s:6:"備援";s:4:"vars";s:6:"變數";s:7:"charset";s:9:"字元集";s:7:"plugins";s:12:"附加元件";s:6:"engine";s:6:"引擎";}s:14:"menu-levels-db";a:14:{s:9:"structure";s:6:"結構";s:3:"sql";s:3:"SQL";s:6:"search";s:6:"搜尋";s:5:"query";s:6:"查詢";s:6:"export";s:6:"匯出";s:6:"import";s:6:"匯入";s:9:"operation";s:6:"操作";s:10:"privileges";s:6:"權限";s:8:"routines";s:12:"預存程序";s:6:"events";s:6:"事件";s:8:"triggers";s:9:"觸發器";s:8:"tracking";s:6:"追蹤";s:8:"designer";s:9:"設計器";s:15:"central_columns";s:12:"中央欄位";}s:19:"profiling_supported";b:1;s:17:"menu-levels-table";a:11:{s:6:"browse";s:6:"瀏覽";s:9:"structure";s:6:"結構";s:3:"sql";s:3:"SQL";s:6:"search";s:6:"搜尋";s:6:"insert";s:6:"新增";s:6:"export";s:6:"匯出";s:6:"import";s:6:"匯入";s:10:"privileges";s:6:"權限";s:9:"operation";s:6:"操作";s:8:"tracking";s:6:"追蹤";s:8:"triggers";s:9:"觸發器";}s:12:"is_superuser";b:1;s:14:"mysql_cur_user";s:14:"root@localhost";s:12:"is_grantuser";b:1;}s:13:"version_check";a:2:{s:8:"response";s:411:"{
+    "version": "5.2.1",
+    "date": "2023-02-08",
+    "releases": [
+        {
+            "version": "5.2.1",
+            "date": "2023-02-08",
+            "php_versions": ">=7.2,<8.3",
+            "mysql_versions": ">=5.5"
+        },
+        {
+            "version": "4.9.11",
+            "date": "2023-02-08",
+            "php_versions": ">=5.5,<8.0",
+            "mysql_versions": ">=5.5"
+        }
+    ]
+}";s:9:"timestamp";i:1699577818;}}git_location|N;is_git_revision|b:0;ConfigFile1|a:3:{s:15:"NavigationWidth";i:243;s:7:"Console";a:1:{s:4:"Mode";s:8:"collapse";}s:7:"Servers";a:1:{i:1;a:2:{s:7:"only_db";s:0:"";s:7:"hide_db";s:0:"";}}}debug|a:0:{}flashMessages|a:0:{}is_multi_query|b:0;sql_history|a:25:{i:0;a:3:{s:2:"db";s:6:"school";s:5:"table";s:7:"classes";s:8:"sqlquery";s:23:"SELECT * FROM `classes`";}i:1;a:3:{s:2:"db";s:6:"school";s:5:"table";s:13:"class_student";s:8:"sqlquery";s:29:"SELECT * FROM `class_student`";}i:2;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:24:"SELECT * FROM `students`";}i:3;a:3:{s:2:"db";s:6:"school";s:5:"table";s:7:"classes";s:8:"sqlquery";s:23:"SELECT * FROM `classes`";}i:4;a:3:{s:2:"db";s:6:"school";s:5:"table";s:13:"class_student";s:8:"sqlquery";s:29:"SELECT * FROM `class_student`";}i:5;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:24:"SELECT * FROM `students`";}i:6;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:43:"SELECT * FROM `students` ORDER BY `id` ASC ";}i:7;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:24:"SELECT * FROM `students`";}i:8;a:3:{s:2:"db";s:6:"school";s:5:"table";s:13:"class_student";s:8:"sqlquery";s:29:"SELECT * FROM `class_student`";}i:9;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:374:"SELECT `students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`;";}i:10;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:374:"SELECT `students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`;";}i:11;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:414:"SELECT `students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:12;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:13;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:14;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:15;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:484:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score` ASC) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:16;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:17;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:18;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:19;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:480:"SELECT  ROW_NUMBER() OVER (ORDER BY`student_scores`.`score`) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` && `students`.`school_num` = `class_student`.`school_num` && 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC;";}i:20;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:24:"SELECT * FROM `students`";}i:21;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:24:"SELECT * FROM `students`";}i:22;a:3:{s:2:"db";s:6:"school";s:5:"table";s:8:"students";s:8:"sqlquery";s:43:"SELECT * FROM `students` ORDER BY `id` ASC ";}i:23;a:3:{s:2:"db";s:6:"school";s:5:"table";s:13:"class_student";s:8:"sqlquery";s:29:"SELECT * FROM `class_student`";}i:24;a:3:{s:2:"db";s:6:"school";s:5:"table";s:4:"dept";s:8:"sqlquery";s:20:"SELECT * FROM `dept`";}}Import_message|a:2:{s:7:"message";s:1997:"<div class="alert alert-danger" role="alert"><h1>錯誤</h1><p><strong>SQL 查詢：</strong>  <a href="#" class="copyQueryBtn" data-text="SELECT  ROW_NUMBER() OVER (ORDER BY Int) as &#039;名次&#039;,`students`.`name` as &#039;姓名&#039;, `students`.`school_num` as &#039;學號&#039;, `classes`.`name` as &#039;班級&#039;, `student_scores`.`score` as &#039;成績&#039;
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` &amp;&amp; `students`.`school_num` = `class_student`.`school_num` &amp;&amp; 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC LIMIT 0, 25">複製</a>
+<a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fselect.html" target="mysql_doc"><img src="themes/dot.gif" title="說明文件" alt="說明文件" class="icon ic_b_help"></a>    </p>
+<p>
+<code class="sql"><pre>
+SELECT  ROW_NUMBER() OVER (ORDER BY Int) as '名次',`students`.`name` as '姓名', `students`.`school_num` as '學號', `classes`.`name` as '班級', `student_scores`.`score` as '成績'
+FROM `students`,`student_scores`,`class_student`,`classes` 
+WHERE `students`.`school_num`= `student_scores`.`school_num` &amp;&amp; `students`.`school_num` = `class_student`.`school_num` &amp;&amp; 
+`class_student`.`class_code`=`classes`.`code`
+ORDER BY `student_scores`.`score` DESC LIMIT 0, 25
+</pre></code>
+</p>
+<p>
+    <strong>MySQL 回應： </strong><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fserver-error-reference.html" target="mysql_doc"><img src="themes/dot.gif" title="說明文件" alt="說明文件" class="icon ic_b_help"></a>
+</p>
+<code>#1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#039;Int) as &#039;名次&#039;,`students`.`name` as &#039;姓名&#039;, `students`.`school_num` as &#039;...&#039; at line 1</code><br></div>";s:11:"go_back_url";s:57:"index.php?route=/table/structure&db=school&table=students";}errors|a:0:{}

@@ -8,6 +8,10 @@
 </head>
 
 <?php
+if(!empty($_POST["tmp"]) && isset($_POST["tmp"])){
+    $_GET["bright"]=$_POST["tmp"];
+}
+
     if (!isset($_GET["bright"])) {
         $_GET["bright"]=0;
         $_GET["tmp_bright"]=0;
@@ -35,7 +39,7 @@
 <?php  if($_GET["bright"]==0){ ?>
     .Nullbox{
         width: 70%;
-        height: 100px;
+        height: 20px;
         /* background-color: blue; */
         display: flex;
         flex-direction: row-reverse;
@@ -69,7 +73,7 @@
 <?php }elseif($_GET["bright"]==1){?>
     .Nullbox{
         width: 70%;
-        height: 100px;
+        height: 20px;
         /* background-color: blue; */
         display: flex;
         flex-direction: row-reverse;
@@ -102,7 +106,7 @@
 <?php }elseif($_GET["bright"]==2){?>
     .Nullbox{
         width: 90%;
-        height: 100px;
+        height: 20px;
         /* background-color: blue; */
         display: flex;
         flex-direction: row-reverse;
@@ -135,7 +139,7 @@
 <?php }else{?>
     .Nullbox{
         width: 50%;
-        height: 100px;
+        height: 20px;
         /* background-color: blue; */
         display: flex;
         flex-direction: row-reverse;
@@ -179,7 +183,10 @@
 
 
 <?php
-$_GET["tmp_bright"]=$_GET["bright"];
+
+    $_GET["tmp_bright"]=$_GET["bright"];
+
+
     $_GET["bright"] = ($_GET["bright"]<3) ? $_GET["bright"]+=1 : 0;
     ?>
 <?php if (isset($_GET['month'])) { ?>
